@@ -1,0 +1,22 @@
+{
+  "name": "@allcity/shared",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    "./constants/statuses": "./constants/statuses.js",
+    "./constants/verticals": "./constants/verticals.js",
+    "./constants/roles": "./constants/roles.js",
+    "./constants/limits": "./constants/limits.js",
+    "./constants/parser": "./constants/parser.js",
+    "./types/user": "./types/user.js",
+    "./types/order": "./types/order.js",
+    "./types/provider": "./types/provider.js",
+    "./types/channelPost": "./types/channelPost.js",
+    "./utils/format": "./utils/format.js",
+    "./utils/calculate": "./utils/calculate.js",
+    "./utils/validate": "./utils/validate.js"
+  },
+  "dependencies": {
+    "zod": "^3.23.0"
+  }
+}

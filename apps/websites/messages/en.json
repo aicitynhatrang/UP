@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "reviews": "Reviews",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "site": {
+    "view_services": "Our Services",
+    "contact_us": "Contact Us",
+    "rating": "Rating",
+    "reviews": "Reviews",
+    "category": "Category",
+    "working_hours": "Working Hours",
+    "photos": "Photos",
+    "see_all": "All",
+    "cta_title": "Ready to try?",
+    "cta_subtitle": "Get in touch with us today",
+    "call_now": "Call Now",
+    "our_services": "Our Services",
+    "no_services": "No services added yet",
+    "minutes": "min",
+    "reviews_title": "Customer Reviews",
+    "no_reviews": "No reviews yet",
+    "anonymous": "Anonymous",
+    "contact_title": "Contact",
+    "contact_info": "Contact Information",
+    "address": "Address",
+    "phone": "Phone",
+    "open_in_maps": "Open in Maps",
+    "gallery_title": "Gallery",
+    "no_photos": "No photos added yet"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "services": "Services",
+    "reviews": "Reviews",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "contact_us": "Contact Us",
+    "powered_by": "Powered by AllCity"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "allcity",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "migrate": "node scripts/migrations/run.js",
+    "seed": "node scripts/seed.js",
+    "set-webhook": "node scripts/set-webhook.js"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

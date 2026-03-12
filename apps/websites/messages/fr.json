@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "reviews": "Avis",
+    "gallery": "Galerie",
+    "contact": "Contact"
+  },
+  "site": {
+    "view_services": "Nos services",
+    "contact_us": "Nous contacter",
+    "rating": "Note",
+    "reviews": "Avis",
+    "category": "Catégorie",
+    "working_hours": "Horaires",
+    "photos": "Photos",
+    "see_all": "Tout",
+    "cta_title": "Prêt à essayer ?",
+    "cta_subtitle": "Contactez-nous dès maintenant",
+    "call_now": "Appeler",
+    "our_services": "Nos services",
+    "no_services": "Aucun service ajouté",
+    "minutes": "min",
+    "reviews_title": "Avis clients",
+    "no_reviews": "Aucun avis pour le moment",
+    "anonymous": "Anonyme",
+    "contact_title": "Contact",
+    "contact_info": "Coordonnées",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "open_in_maps": "Ouvrir dans Maps",
+    "gallery_title": "Galerie",
+    "no_photos": "Aucune photo ajoutée"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "services": "Services",
+    "reviews": "Avis",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "contact_us": "Nous contacter",
+    "powered_by": "Propulsé par AllCity"
+  }
+}

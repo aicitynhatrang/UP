@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Главная",
+    "services": "Услуги",
+    "reviews": "Отзывы",
+    "gallery": "Галерея",
+    "contact": "Контакты"
+  },
+  "site": {
+    "view_services": "Наши услуги",
+    "contact_us": "Связаться",
+    "rating": "Рейтинг",
+    "reviews": "Отзывов",
+    "category": "Категория",
+    "working_hours": "Часы работы",
+    "photos": "Фотографии",
+    "see_all": "Все",
+    "cta_title": "Готовы попробовать?",
+    "cta_subtitle": "Свяжитесь с нами прямо сейчас",
+    "call_now": "Позвонить",
+    "our_services": "Наши услуги",
+    "no_services": "Услуги пока не добавлены",
+    "minutes": "мин",
+    "reviews_title": "Отзывы клиентов",
+    "no_reviews": "Отзывов пока нет",
+    "anonymous": "Аноним",
+    "contact_title": "Контакты",
+    "contact_info": "Контактная информация",
+    "address": "Адрес",
+    "phone": "Телефон",
+    "open_in_maps": "Открыть на карте",
+    "gallery_title": "Галерея",
+    "no_photos": "Фотографии пока не добавлены"
+  },
+  "footer": {
+    "navigation": "Навигация",
+    "services": "Услуги",
+    "reviews": "Отзывы",
+    "gallery": "Галерея",
+    "contact": "Контакты",
+    "contact_us": "Связаться",
+    "powered_by": "Сайт на платформе AllCity"
+  }
+}

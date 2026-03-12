@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "홈",
+    "services": "서비스",
+    "reviews": "리뷰",
+    "gallery": "갤러리",
+    "contact": "연락처"
+  },
+  "site": {
+    "view_services": "서비스 보기",
+    "contact_us": "문의하기",
+    "rating": "평점",
+    "reviews": "리뷰",
+    "category": "카테고리",
+    "working_hours": "영업시간",
+    "photos": "사진",
+    "see_all": "전체",
+    "cta_title": "준비되셨나요?",
+    "cta_subtitle": "지금 연락주세요",
+    "call_now": "전화하기",
+    "our_services": "서비스 목록",
+    "no_services": "등록된 서비스가 없습니다",
+    "minutes": "분",
+    "reviews_title": "고객 리뷰",
+    "no_reviews": "리뷰가 없습니다",
+    "anonymous": "익명",
+    "contact_title": "연락처",
+    "contact_info": "연락처 정보",
+    "address": "주소",
+    "phone": "전화",
+    "open_in_maps": "지도에서 열기",
+    "gallery_title": "갤러리",
+    "no_photos": "사진이 없습니다"
+  },
+  "footer": {
+    "navigation": "내비게이션",
+    "services": "서비스",
+    "reviews": "리뷰",
+    "gallery": "갤러리",
+    "contact": "연락처",
+    "contact_us": "문의하기",
+    "powered_by": "AllCity 제공"
+  }
+}

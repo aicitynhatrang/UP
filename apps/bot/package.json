@@ -1,0 +1,23 @@
+{
+  "name": "@allcity/bot",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "test": "vitest run",
+    "lint": "eslint src/"
+  },
+  "dependencies": {
+    "@allcity/shared": "workspace:*",
+    "telegraf": "^4.16.0",
+    "@supabase/supabase-js": "^2.43.0",
+    "zod": "^3.23.0",
+    "winston": "^3.11.0",
+    "@sentry/node": "^8.0.0",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0"
+  }
+}

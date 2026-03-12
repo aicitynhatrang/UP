@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "services": "Dịch vụ",
+    "reviews": "Đánh giá",
+    "gallery": "Thư viện ảnh",
+    "contact": "Liên hệ"
+  },
+  "site": {
+    "view_services": "Dịch vụ của chúng tôi",
+    "contact_us": "Liên hệ",
+    "rating": "Đánh giá",
+    "reviews": "Đánh giá",
+    "category": "Danh mục",
+    "working_hours": "Giờ làm việc",
+    "photos": "Hình ảnh",
+    "see_all": "Tất cả",
+    "cta_title": "Sẵn sàng trải nghiệm?",
+    "cta_subtitle": "Liên hệ với chúng tôi ngay",
+    "call_now": "Gọi ngay",
+    "our_services": "Dịch vụ của chúng tôi",
+    "no_services": "Chưa có dịch vụ nào",
+    "minutes": "phút",
+    "reviews_title": "Đánh giá từ khách hàng",
+    "no_reviews": "Chưa có đánh giá nào",
+    "anonymous": "Ẩn danh",
+    "contact_title": "Liên hệ",
+    "contact_info": "Thông tin liên hệ",
+    "address": "Địa chỉ",
+    "phone": "Điện thoại",
+    "open_in_maps": "Mở trên bản đồ",
+    "gallery_title": "Thư viện ảnh",
+    "no_photos": "Chưa có hình ảnh nào"
+  },
+  "footer": {
+    "navigation": "Điều hướng",
+    "services": "Dịch vụ",
+    "reviews": "Đánh giá",
+    "gallery": "Thư viện ảnh",
+    "contact": "Liên hệ",
+    "contact_us": "Liên hệ",
+    "powered_by": "Nền tảng AllCity"
+  }
+}

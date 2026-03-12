@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "首页",
+    "services": "服务",
+    "reviews": "评价",
+    "gallery": "相册",
+    "contact": "联系"
+  },
+  "site": {
+    "view_services": "我们的服务",
+    "contact_us": "联系我们",
+    "rating": "评分",
+    "reviews": "评价",
+    "category": "类别",
+    "working_hours": "营业时间",
+    "photos": "照片",
+    "see_all": "全部",
+    "cta_title": "准备好了吗？",
+    "cta_subtitle": "立即联系我们",
+    "call_now": "立即拨打",
+    "our_services": "我们的服务",
+    "no_services": "暂无服务",
+    "minutes": "分钟",
+    "reviews_title": "客户评价",
+    "no_reviews": "暂无评价",
+    "anonymous": "匿名",
+    "contact_title": "联系方式",
+    "contact_info": "联系信息",
+    "address": "地址",
+    "phone": "电话",
+    "open_in_maps": "在地图中打开",
+    "gallery_title": "相册",
+    "no_photos": "暂无照片"
+  },
+  "footer": {
+    "navigation": "导航",
+    "services": "服务",
+    "reviews": "评价",
+    "gallery": "相册",
+    "contact": "联系",
+    "contact_us": "联系我们",
+    "powered_by": "AllCity 提供技术支持"
+  }
+}

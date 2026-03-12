@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "reviews": "Bewertungen",
+    "gallery": "Galerie",
+    "contact": "Kontakt"
+  },
+  "site": {
+    "view_services": "Unsere Leistungen",
+    "contact_us": "Kontakt",
+    "rating": "Bewertung",
+    "reviews": "Bewertungen",
+    "category": "Kategorie",
+    "working_hours": "Öffnungszeiten",
+    "photos": "Fotos",
+    "see_all": "Alle",
+    "cta_title": "Bereit loszulegen?",
+    "cta_subtitle": "Kontaktieren Sie uns noch heute",
+    "call_now": "Jetzt anrufen",
+    "our_services": "Unsere Leistungen",
+    "no_services": "Noch keine Leistungen hinzugefügt",
+    "minutes": "Min",
+    "reviews_title": "Kundenbewertungen",
+    "no_reviews": "Noch keine Bewertungen",
+    "anonymous": "Anonym",
+    "contact_title": "Kontakt",
+    "contact_info": "Kontaktdaten",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "open_in_maps": "In Karten öffnen",
+    "gallery_title": "Galerie",
+    "no_photos": "Noch keine Fotos"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "services": "Leistungen",
+    "reviews": "Bewertungen",
+    "gallery": "Galerie",
+    "contact": "Kontakt",
+    "contact_us": "Kontakt",
+    "powered_by": "Betrieben von AllCity"
+  }
+}
