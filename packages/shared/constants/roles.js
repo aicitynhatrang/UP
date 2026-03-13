@@ -64,6 +64,32 @@ export const REFERRAL_CHAIN = {
   L3: 0.1,   // 10% of referral %
 }
 
+// Blogger referral percentage by vertical
+export const BLOGGER_REFERRAL_BY_VERTICAL = {
+  restaurants: 5,
+  beauty: 5,
+  health: 4,
+  fitness: 4,
+  hotels: 3,
+  tours: 4,
+  realestate: 2,
+  transport: 3,
+  education: 4,
+  shopping: 3,
+  entertainment: 4,
+  services: 3,
+  coworking: 3,
+  pets: 4,
+  cleaning: 3,
+  repair: 3,
+  legal: 3,
+  insurance: 2,
+  finance: 2,
+  it: 3,
+  marketing: 4,
+  photo: 4,
+}
+
 // Co-invest fund rules
 export const CO_INVEST_RULES = {
   MIN_PROJECT_USD:        70000,
