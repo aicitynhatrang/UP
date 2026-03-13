@@ -1,18 +1,18 @@
 import OpenAI from 'openai'
 
-function requireEnv(key) {
-  const val = process.env[key]
-  if (!val) throw new Error(`Missing required env: ${key}`)
-  return val
+function optionalEnv(key) {
+  return process.env[key] || ''
 }
 
-export const openai = new OpenAI({
-  apiKey: requireEnv('OPENAI_API_KEY'),
-})
+const apiKey = optionalEnv('OPENAI_API_KEY')
+
+export const openai = apiKey
+  ? new OpenAI({ apiKey })
+  : null
 
 export const aiConfig = {
-  apiKey:             requireEnv('OPENAI_API_KEY'),
-  googleVisionKey:    requireEnv('GOOGLE_VISION_API_KEY'),
+  apiKey,
+  googleVisionKey:    optionalEnv('GOOGLE_VISION_API_KEY'),
   // Default models
   textModel:          'gpt-4o-mini',
   visionModel:        'gpt-4o-mini',

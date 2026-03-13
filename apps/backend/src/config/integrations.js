@@ -1,16 +1,10 @@
-function requireEnv(key) {
-  const val = process.env[key]
-  if (!val) throw new Error(`Missing required env: ${key}`)
-  return val
-}
-
 function optionalEnv(key, fallback = '') {
   return process.env[key] ?? fallback
 }
 
 export const integrationsConfig = {
   weather: {
-    apiKey:      requireEnv('OPENWEATHER_API_KEY'),
+    apiKey:      optionalEnv('OPENWEATHER_API_KEY'),
     baseUrl:     'https://api.openweathermap.org/data/2.5',
     // Nha Trang default coords
     defaultLat:  12.2388,
@@ -19,7 +13,7 @@ export const integrationsConfig = {
     hotThresholdC:  35,             // heat alert
   },
   mapbox: {
-    token:       requireEnv('MAPBOX_TOKEN'),
+    token:       optionalEnv('MAPBOX_TOKEN'),
     style:       'mapbox://styles/mapbox/dark-v11',
     heatmapRadius: 3000,            // meters
   },
