@@ -1,11 +1,7 @@
-import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { CategoryGrid } from '@/components/catalog/CategoryGrid'
-import { WeatherWidget } from '@/components/home/WeatherWidget'
-import { FeaturedDeals } from '@/components/home/FeaturedDeals'
-import { FeaturedProviders } from '@/components/home/FeaturedProviders'
-import { UpcomingEvents } from '@/components/home/UpcomingEvents'
+import { HomeClient } from './HomeClient'
 
 interface Props {
   params: { locale: string }
@@ -16,8 +12,8 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
   return { title: t('hero_title').replace('\n', ' ') }
 }
 
-export default function HomePage() {
-  const t = useTranslations('home')
+export default async function HomePage({ params: { locale } }: Props) {
+  const t = await getTranslations({ locale, namespace: 'home' })
 
   return (
     <main className="min-h-screen">
@@ -38,23 +34,14 @@ export default function HomePage() {
       </section>
 
       <div className="max-w-6xl mx-auto px-4 py-8 space-y-10">
-        {/* Weather */}
-        <WeatherWidget />
-
         {/* Categories */}
         <section id="catalog">
           <h2 className="text-2xl font-bold mb-6">{t('categories')}</h2>
           <CategoryGrid />
         </section>
 
-        {/* Flash Deals */}
-        <FeaturedDeals />
-
-        {/* Featured Providers */}
-        <FeaturedProviders />
-
-        {/* Upcoming Events */}
-        <UpcomingEvents />
+        {/* Client-side widgets */}
+        <HomeClient />
       </div>
     </main>
   )
