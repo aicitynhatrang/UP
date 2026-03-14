@@ -253,7 +253,20 @@
     "entertainment": "Развлечения",
     "kids": "Детям",
     "pets": "Питомцы",
-    "freelance": "Фриланс"
+    "freelance": "Фриланс",
+    "housing": "Жильё",
+    "food": "Еда",
+    "sports": "Спорт",
+    "medicine": "Медицина",
+    "telecom": "Связь",
+    "household": "Быт",
+    "legal": "Юристы",
+    "business": "Бизнес",
+    "photo": "Фото",
+    "repair": "Ремонт",
+    "delivery": "Доставка",
+    "creative": "Креатив",
+    "other": "Другое"
   },
   "map": {
     "search_placeholder": "Поиск на карте...",

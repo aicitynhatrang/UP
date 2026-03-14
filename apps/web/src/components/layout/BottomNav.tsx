@@ -1,8 +1,8 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { useLocale, usePathname } from 'next-intl'
 
 const tabs = [
   { key: 'home',     href: '',         icon: '🏠' },
