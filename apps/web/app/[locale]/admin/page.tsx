@@ -16,7 +16,7 @@ export default function AdminPage() {
   const user = useAuthStore(s => s.user)
   const [tab, setTab] = useState<Tab>('kpis')
 
-  if (user?.role !== 'admin') {
+  if (!user?.isAdmin) {
     return (
       <main className="max-w-3xl mx-auto px-4 py-16 text-center">
         <h1 className="text-2xl font-bold mb-4">{t('title')}</h1>
