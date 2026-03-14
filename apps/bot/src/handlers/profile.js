@@ -28,10 +28,10 @@ async function handleProfile(ctx) {
   const lines = [
     `${l.profile}`,
     ``,
-    `${l.level}: ${levelConfig.emoji} ${levelConfig.name.ru}`,
+    `${l.level}: ${levelConfig.emoji} ${levelConfig.name}`,
     `${l.balance}: ${user.balance_points.toLocaleString()}`,
     `${l.lifetime}: ${user.lifetime_points.toLocaleString()}`,
-    nextLevel ? `➡️ ${nextLevel.name.ru}: ${nextLevel.minPoints - user.lifetime_points} pts` : '🏆 Max level!',
+    nextLevel ? `➡️ ${nextLevel.name}: ${nextLevel.minPoints - user.lifetime_points} pts` : '🏆 Max level!',
     ``,
     `${l.referral}: \`${user.referral_code}\``,
     `${l.invite}: https://t.me/${ctx.botInfo.username}?start=ref_${user.referral_code}`,
