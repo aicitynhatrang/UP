@@ -10,6 +10,8 @@ import { Header } from '@/components/layout/Header'
 import { BottomNav } from '@/components/layout/BottomNav'
 import '../globals.css'
 
+export const dynamic = 'force-dynamic'
+
 const inter = Inter({ subsets: ['latin', 'cyrillic'], variable: '--font-inter' })
 
 interface Props {
