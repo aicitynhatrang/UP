@@ -73,7 +73,7 @@ async function start() {
     logger.info({ webhookUrl }, 'Bot: webhook set')
 
     // If running standalone (not behind backend), start webhook server
-    const PORT = parseInt(process.env.BOT_PORT ?? '3002', 10)
+    const PORT = parseInt(process.env.PORT ?? process.env.BOT_PORT ?? '3002', 10)
     await bot.launch({
       webhook: {
         domain:    WEBHOOK_DOMAIN,
