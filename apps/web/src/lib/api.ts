@@ -15,7 +15,13 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
 
   const res = await fetch(`${BASE_URL}${path}`, { ...init, headers })
 
-  const json = await res.json()
+  const text = await res.text()
+  let json: any
+  try {
+    json = JSON.parse(text)
+  } catch {
+    throw new Error(`Invalid JSON response: ${res.status}`)
+  }
 
   if (!res.ok || json.ok === false) {
     const msg = json?.error?.message ?? `HTTP ${res.status}`
