@@ -114,7 +114,7 @@ function UsersTab() {
               </td>
               <td className="p-3 text-right">
                 <button
-                  onClick={() => banUser.mutate({ userId: u.id, banned: !u.banned })}
+                  onClick={() => banUser.mutate({ userId: u.id, isBanned: !u.banned })}
                   className="text-xs text-red-500 hover:underline"
                 >
                   {u.banned ? t('unban') : t('ban')}
