@@ -11,7 +11,8 @@
     "typecheck": "turbo run typecheck",
     "migrate": "node scripts/migrations/run.js",
     "seed": "node scripts/seed.js",
-    "set-webhook": "node scripts/set-webhook.js"
+    "set-webhook": "node scripts/set-webhook.js",
+    "start": "node apps/backend/src/index.js"
   },
   "devDependencies": {
     "turbo": "^2.0.0",
