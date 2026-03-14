@@ -1,8 +1,14 @@
 'use client'
 
-import { useEffect, useCallback } from 'react'
+import { useEffect, useCallback, useState } from 'react'
 import { useAuthStore } from '@/store/authStore'
 import { useLogin } from '@/lib/queries/auth'
+
+function getTelegram() {
+  if (typeof window === 'undefined') return null
+  // @ts-expect-error Telegram global
+  return window.Telegram?.WebApp ?? null
+}
 
 /**
  * Hook that auto-authenticates if running inside Telegram Mini App.
@@ -12,25 +18,41 @@ export function useTelegramAuth() {
   const login    = useLogin()
   const token    = useAuthStore(s => s.accessToken)
   const user     = useAuthStore(s => s.user)
-
-  const isTelegram = typeof window !== 'undefined' &&
-    // @ts-expect-error Telegram global
-    !!window.Telegram?.WebApp?.initData
+  const [isTelegram, setIsTelegram] = useState(false)
 
   const tryLogin = useCallback(() => {
-    // @ts-expect-error Telegram global
-    const tg = typeof window !== 'undefined' ? window.Telegram?.WebApp : null
-    if (!tg?.initData) return
+    const tg = getTelegram()
+    if (!tg?.initData) return false
 
     login.mutate({
       initData:    tg.initData,
       fingerprint: getFingerprint(),
     })
+    return true
   }, [login])
 
-  // Auto-login on mount if no token and inside Telegram
+  // Auto-login on mount — retry a few times to wait for SDK to load
   useEffect(() => {
-    if (!token) tryLogin()
+    if (token) return
+
+    // Try immediately
+    if (tryLogin()) { setIsTelegram(true); return }
+
+    // SDK may not be ready yet — retry up to 5 times
+    let attempts = 0
+    const timer = setInterval(() => {
+      attempts++
+      const tg = getTelegram()
+      if (tg?.initData) {
+        setIsTelegram(true)
+        tryLogin()
+        clearInterval(timer)
+      } else if (attempts >= 5) {
+        clearInterval(timer)
+      }
+    }, 300)
+
+    return () => clearInterval(timer)
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return {

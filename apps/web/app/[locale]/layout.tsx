@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
@@ -43,10 +44,11 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
 
   return (
     <html lang={locale} className={inter.variable}>
-      <head>
-        <script src="https://telegram.org/js/telegram-web-app.js" />
-      </head>
       <body className="bg-surface text-gray-900 antialiased">
+        <Script
+          src="https://telegram.org/js/telegram-web-app.js"
+          strategy="beforeInteractive"
+        />
         <NextIntlClientProvider messages={messages}>
           <QueryProvider>
             <AuthProvider>
