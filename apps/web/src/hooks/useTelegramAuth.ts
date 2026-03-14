@@ -13,6 +13,10 @@ export function useTelegramAuth() {
   const token    = useAuthStore(s => s.accessToken)
   const user     = useAuthStore(s => s.user)
 
+  const isTelegram = typeof window !== 'undefined' &&
+    // @ts-expect-error Telegram global
+    !!window.Telegram?.WebApp?.initData
+
   const tryLogin = useCallback(() => {
     // @ts-expect-error Telegram global
     const tg = typeof window !== 'undefined' ? window.Telegram?.WebApp : null
@@ -24,7 +28,7 @@ export function useTelegramAuth() {
     })
   }, [login])
 
-  // Auto-login on mount if no token
+  // Auto-login on mount if no token and inside Telegram
   useEffect(() => {
     if (!token) tryLogin()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
@@ -33,6 +37,7 @@ export function useTelegramAuth() {
     user,
     isLoggedIn:  !!token,
     isLoading:   login.isPending,
+    isTelegram,
     error:       login.error,
     login:       tryLogin,
   }

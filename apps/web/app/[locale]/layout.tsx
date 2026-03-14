@@ -43,6 +43,9 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
 
   return (
     <html lang={locale} className={inter.variable}>
+      <head>
+        <script src="https://telegram.org/js/telegram-web-app.js" />
+      </head>
       <body className="bg-surface text-gray-900 antialiased">
         <NextIntlClientProvider messages={messages}>
           <QueryProvider>

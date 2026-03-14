@@ -14,7 +14,7 @@ export function ProfileContent() {
   const tg = useTranslations('gamification')
   const tc = useTranslations('common')
 
-  const { user, isLoggedIn, login } = useTelegramAuth()
+  const { user, isLoggedIn, isLoading, isTelegram, login } = useTelegramAuth()
   const logout = useLogout()
 
   if (!isLoggedIn || !user) {
@@ -23,9 +23,16 @@ export function ProfileContent() {
         <p className="text-5xl mb-4">🔐</p>
         <h1 className="text-xl font-bold mb-2">{ta('login')}</h1>
         <p className="text-gray-500 mb-6">{ta('login_description')}</p>
-        <button onClick={login} className="btn-primary">
-          {ta('login_with_telegram')}
+        <button
+          onClick={login}
+          disabled={isLoading || !isTelegram}
+          className="btn-primary disabled:opacity-50"
+        >
+          {isLoading ? '...' : ta('login_with_telegram')}
         </button>
+        {!isTelegram && (
+          <p className="text-sm text-gray-400 mt-3">{ta('open_in_telegram')}</p>
+        )}
       </main>
     )
   }

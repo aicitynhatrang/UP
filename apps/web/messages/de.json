@@ -62,6 +62,7 @@
     "logout": "Abmelden",
     "login_with_telegram": "Mit Telegram anmelden",
     "login_description": "Nutzen Sie Telegram für schnelle Anmeldung",
+    "open_in_telegram": "Öffnen Sie in Telegram zum Anmelden",
     "welcome_back": "Willkommen zurück, {name}!",
     "first_time": "Willkommen bei AllCity!",
     "profile": "Mein Profil",

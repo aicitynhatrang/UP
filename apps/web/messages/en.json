@@ -62,6 +62,7 @@
     "logout": "Sign Out",
     "login_with_telegram": "Sign in with Telegram",
     "login_description": "Use Telegram for instant sign-in",
+    "open_in_telegram": "Open in Telegram to sign in",
     "welcome_back": "Welcome back, {name}!",
     "first_time": "Welcome to AllCity!",
     "profile": "My Profile",

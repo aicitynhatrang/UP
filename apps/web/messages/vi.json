@@ -62,6 +62,7 @@
     "logout": "Đăng xuất",
     "login_with_telegram": "Đăng nhập bằng Telegram",
     "login_description": "Dùng Telegram để đăng nhập nhanh",
+    "open_in_telegram": "Mở trong Telegram để đăng nhập",
     "welcome_back": "Chào mừng trở lại, {name}!",
     "first_time": "Chào mừng đến AllCity!",
     "profile": "Hồ sơ của tôi",

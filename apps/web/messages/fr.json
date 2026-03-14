@@ -62,6 +62,7 @@
     "logout": "Se déconnecter",
     "login_with_telegram": "Connexion via Telegram",
     "login_description": "Utilisez Telegram pour une connexion rapide",
+    "open_in_telegram": "Ouvrez dans Telegram pour vous connecter",
     "welcome_back": "Content de vous revoir, {name} !",
     "first_time": "Bienvenue sur AllCity !",
     "profile": "Mon profil",
