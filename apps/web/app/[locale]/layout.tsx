@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import { locales, type Locale } from '@/i18n/config'
 import { QueryProvider } from '@/components/providers/QueryProvider'
 import { AuthProvider } from '@/components/providers/AuthProvider'
+import { ErrorBoundary } from '@/components/providers/ErrorBoundary'
 import { Header } from '@/components/layout/Header'
 import { BottomNav } from '@/components/layout/BottomNav'
 import '../globals.css'
@@ -50,15 +51,17 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
           strategy="afterInteractive"
         />
         <NextIntlClientProvider messages={messages}>
-          <QueryProvider>
-            <AuthProvider>
-              <Header />
-              <div className="pb-16 md:pb-0">
-                {children}
-              </div>
-              <BottomNav />
-            </AuthProvider>
-          </QueryProvider>
+          <ErrorBoundary>
+            <QueryProvider>
+              <AuthProvider>
+                <Header />
+                <div className="pb-16 md:pb-0">
+                  {children}
+                </div>
+                <BottomNav />
+              </AuthProvider>
+            </QueryProvider>
+          </ErrorBoundary>
         </NextIntlClientProvider>
       </body>
     </html>
