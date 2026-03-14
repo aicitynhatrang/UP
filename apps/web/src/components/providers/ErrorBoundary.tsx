@@ -18,7 +18,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error) {
-    return { hasError: true, error: error.message }
+    return { hasError: true, error: error.message + ' | ' + (error.stack?.split('\n').slice(0, 3).join(' ← ') ?? '') }
   }
 
   render() {
