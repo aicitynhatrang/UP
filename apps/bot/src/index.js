@@ -64,16 +64,17 @@ const WEBHOOK_DOMAIN = process.env.WEBHOOK_DOMAIN
 const WEBHOOK_PATH   = process.env.WEBHOOK_PATH ?? '/webhook/telegram'
 
 async function start() {
+  // Validate critical env vars early
+  const missing = ['SUPABASE_URL', 'SUPABASE_SERVICE_ROLE_KEY'].filter(k => !process.env[k])
+  if (missing.length) {
+    logger.error(`Missing env vars: ${missing.join(', ')}`)
+    process.exit(1)
+  }
+
   if (WEBHOOK_DOMAIN) {
     // Production: webhook mode
-    const webhookUrl = `${WEBHOOK_DOMAIN}${WEBHOOK_PATH}`
-    await bot.telegram.setWebhook(webhookUrl, {
-      secret_token: process.env.WEBHOOK_SECRET_TOKEN,
-    })
-    logger.info({ webhookUrl }, 'Bot: webhook set')
-
-    // If running standalone (not behind backend), start webhook server
     const PORT = parseInt(process.env.PORT ?? process.env.BOT_PORT ?? '3002', 10)
+    logger.info(`Bot: starting webhook on port ${PORT}, domain ${WEBHOOK_DOMAIN}`)
     await bot.launch({
       webhook: {
         domain:    WEBHOOK_DOMAIN,
@@ -82,7 +83,7 @@ async function start() {
         secretToken: process.env.WEBHOOK_SECRET_TOKEN,
       },
     })
-    logger.info({ port: PORT }, 'Bot: webhook server started')
+    logger.info(`Bot: webhook server started on port ${PORT}`)
   } else {
     // Development: long polling
     await bot.launch()
